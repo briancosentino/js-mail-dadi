@@ -6,3 +6,15 @@ eh si!  Basta ragionare un po’. */
 
 const guestsEmail = ['giulia@gmail.com', 'giovanni@gmail.com', 'francesco@gmail.com', 'gaetano@gmail.com', 'giacomo@gmail.com']
 console.log(guestsEmail);
+const emailInput = prompt('inserisci la tua mail')
+
+for (let i = 0; i<guestsEmail.length; i++){
+    if (emailInput === guestsEmail[i]){
+       console.log('Sei nella lista, puoi accedere!');
+        break
+    } else{
+      console.log('Mi dispiace, non sei nella lista ');
+        
+    }
+}
+
