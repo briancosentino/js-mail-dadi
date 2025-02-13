@@ -8,18 +8,23 @@ const guestsEmail = ['giulia@gmail.com', 'giovanni@gmail.com', 'francesco@gmail.
 console.log(guestsEmail);
 const emailInput = prompt('inserisci la tua mail')
 let message;
+let verifyEmail;
 for (let i = 0; i<guestsEmail.length; i++){
-    const verifyEmail = emailInput === guestsEmail[i];
-    if (verifyEmail === true){
-      message = ('Sei nella lista, puoi accedere!');
-      
+     verifyEmail = emailInput === guestsEmail[i];
+     if (verifyEmail){
+       message = 'Sei nella lista, puoi accedere!';
        
-    } else{
-      message = ('Mi dispiace, non sei nella lista');
-     
         
-    }
+     } 
+         
+     
 }
-console.log(message);
+if (message === undefined){
+    console.log('Mi dispiace, non sei nella lista');
+    
+} else {
+
+    console.log(message);
+}
 
 
