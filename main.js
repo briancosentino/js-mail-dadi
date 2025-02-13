@@ -7,14 +7,19 @@ eh si!  Basta ragionare un po’. */
 const guestsEmail = ['giulia@gmail.com', 'giovanni@gmail.com', 'francesco@gmail.com', 'gaetano@gmail.com', 'giacomo@gmail.com']
 console.log(guestsEmail);
 const emailInput = prompt('inserisci la tua mail')
-
+let message;
 for (let i = 0; i<guestsEmail.length; i++){
-    if (emailInput === guestsEmail[i]){
-       console.log('Sei nella lista, puoi accedere!');
-        break
+    const verifyEmail = emailInput === guestsEmail[i];
+    if (verifyEmail === true){
+      message = ('Sei nella lista, puoi accedere!');
+      
+       
     } else{
-      console.log('Mi dispiace, non sei nella lista ');
+      message = ('Mi dispiace, non sei nella lista');
+     
         
     }
 }
+console.log(message);
+
 
